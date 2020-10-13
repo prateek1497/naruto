@@ -19,27 +19,13 @@ function getData(query, limit=16) {
         
     })
     .then((responseData) => {
-        console.log('responseData' , responseData)
         return responseData.results
     })
     .catch(({status, statusText})=>{
         console.log(status)
         console.log(statusText)
     })
-    // let da = {
-    //     request_hash: 1,
-    //     results: 
-    //     [{image_url: 	"https://cdn.myanimelist.net/images/anime/13/17405.jpg?s=59241469eb470604a792add6fbe7cce6"},
-    //     {image_url: 	"https://cdn.myanimelist.net/images/anime/13/17405.jpg?s=59241469eb470604a792add6fbe7cce6"},
-    //     {image_url: 	"https://cdn.myanimelist.net/images/anime/13/17405.jpg?s=59241469eb470604a792add6fbe7cce6"},
-    //     {image_url: 	"https://cdn.myanimelist.net/images/anime/13/17405.jpg?s=59241469eb470604a792add6fbe7cce6"},
-    //     {image_url: 	"https://cdn.myanimelist.net/images/anime/13/17405.jpg?s=59241469eb470604a792add6fbe7cce6"},
-    //     {image_url: 	"https://cdn.myanimelist.net/images/anime/13/17405.jpg?s=59241469eb470604a792add6fbe7cce6"}
-    //     ]
-    // }
-    // data = da.results
-
-    // return data;
+   
 
 }
 

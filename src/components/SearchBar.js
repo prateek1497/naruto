@@ -3,7 +3,6 @@ import Data from '../redux/getData'
 import '../cssFiles/searchBar.css'
 import {connect} from 'react-redux'
 import getResults from '../redux/actions/actionCreator'
-// import { setQueryStateinStore } from '../redux/actions/actionCreator' 
 
 class SearchBar extends Component {
 
@@ -66,10 +65,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    console.log('QUERY VALUE')
     return{
         getResults : (query) => dispatch(getResults(query)),
-        // setQueryStateinStore: (query) => dispatch(setQueryStateinStore(query))
         
     }
 }

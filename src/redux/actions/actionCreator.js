@@ -13,20 +13,6 @@ const getResults = (query) => {
             })
         })
     }
-
-
-    // let data = []
-    // data = getData(query)
-    // setTimeout(()=>{
-    //     // console.log('INSIDE GET RESULTS', data.value)
-    //     return {
-    //         type: GET_RESULTS,
-    //         payload: data.value
-    //     }
-    // },3000)
-    
-   
-
     
 }
 

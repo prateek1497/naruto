@@ -19,7 +19,6 @@ const reducer = (state = initialState, action) =>{
         newState.data = [...state,...action.payload.data],
         newState.queryValue = action.payload.queryValue
     }
-//    console.log('inside the reducer' ,state)
     return newState
 }
 
