@@ -17,8 +17,7 @@ class DisplayCards extends Component {
     }
 
     handleLoadMoreClick = () => {
-        this.state.countLoadMoreClicked = this.state.countLoadMoreClicked + 1;
-        this.props.loadMore(this.props.queryValue, this.state.countLoadMoreClicked*16)
+       this.props.loadMore(this.props.queryValue, (this.props.pageCount+1)*16)
         
     }
       
@@ -62,7 +61,8 @@ class DisplayCards extends Component {
 const mapStateToProps = (state) => {
     return {
         data : state.data,
-        queryValue : state.queryValue
+        queryValue : state.queryValue,
+        pageCount: state.pageCount
     }
 }
 const mapDispatchToProps = (dispatch) => {
