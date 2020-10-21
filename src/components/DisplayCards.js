@@ -6,7 +6,7 @@ import { loadMore } from '../redux/actions/actionCreator'
 import '../cssFiles/DisplayCards.css'
 
 
-class DisplayCards extends Component {
+class DisplayCards extends React.PureComponent {
 
     constructor(props){
         super(props)
