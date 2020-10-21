@@ -19,9 +19,6 @@ const reducer = (state = initialState, action) =>{
         newState.pageCount = 1
     }
     else if(action.type === LOAD_MORE){
-        // action.payload.data = action.payload.data.slice(state.pageCount*16, (state.pageCount+1)*16)
-        // console.log('action.payload.data', action.payload.data)
-        // console.log('state', state.data)
         let new_data = action.payload.data.slice(state.pageCount*16,(state.pageCount+1)*16)
         newState.data = [...state.data, ...new_data],
         newState.queryValue = action.payload.queryValue,
