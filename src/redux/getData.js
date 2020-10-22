@@ -1,9 +1,9 @@
 import React from 'react'
 
-function getData(query, limit=16) {
+function getData(query, limit=16, page=1) {
     let data = [];
     let url = 'https://api.jikan.moe/v3/search/anime';
-    url = `${url}?q=${query}&limit=${limit}`
+    url = `${url}?q=${query}&limit=${limit}&page=${page}`
 
     return fetch(url)
     .then((response)=> { 

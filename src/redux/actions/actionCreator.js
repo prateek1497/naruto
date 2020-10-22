@@ -1,9 +1,9 @@
 import { GET_RESULTS, LOAD_MORE} from './actionsList'
 import getData from '../getData'
-const getResults = (query) => {
+const getResults = (query, limit, page) => {
 
     return function(dispatch){
-        return getData(query).then((data)=>{
+        return getData(query, limit, page).then((data)=>{
             dispatch({
                 type: GET_RESULTS,
                 payload: {
@@ -16,9 +16,9 @@ const getResults = (query) => {
     
 }
 
-export const loadMore = (query, limit) => {
+export const loadMore = (query, limit, page) => {
       return function(dispatch){
-        return getData(query, limit).then((data)=>{
+        return getData(query, limit, page).then((data)=>{
             dispatch({
                 type: LOAD_MORE,
                 payload: {

@@ -17,7 +17,7 @@ class DisplayCards extends React.PureComponent {
     }
 
     handleLoadMoreClick = () => {
-       this.props.loadMore(this.props.queryValue, (this.props.pageCount+1)*16)
+       this.props.loadMore(this.props.queryValue, 16, this.props.pageCount+1)
         
     }
       
@@ -67,8 +67,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return{
-        getResults : (query) => dispatch(getResults(query)),
-        loadMore : (query, limit) => dispatch(loadMore(query, limit))
+        getResults : (query, limit, page) => dispatch(getResults(query, limit, page)),
+        loadMore : (query, limit, page) => dispatch(loadMore(query, limit, page))
     }
 }
 
